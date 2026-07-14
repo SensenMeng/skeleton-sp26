@@ -24,7 +24,30 @@ public class Particle {
         if (flavor == ParticleFlavor.EMPTY) {
             return Color.BLACK;
         }
-        return Color.GRAY;
+        else if (flavor == ParticleFlavor.SAND) {
+            return Color.YELLOW;
+        }
+        else if (flavor == ParticleFlavor.BARRIER) {
+            return Color.GRAY;
+        }
+        else if (flavor == ParticleFlavor.WATER) {
+            return Color.BLUE;
+        }
+        else if (flavor == ParticleFlavor.FOUNTAIN) {
+            return Color.CYAN;
+        }
+        else if (flavor == ParticleFlavor.PLANT) {
+            return new Color(0, 255, 0);
+        }
+        else if (flavor == ParticleFlavor.FIRE) {
+            return new Color(255, 0, 0);
+        }
+        else if (flavor == ParticleFlavor.FLOWER) {
+            return new Color(255, 141, 161);
+        }
+        else  {
+            return null;
+        }
     }
 
     public void moveInto(Particle other) {
